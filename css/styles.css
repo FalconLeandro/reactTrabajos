@@ -418,8 +418,8 @@ iframe {
 
   &:hover {
 
-    background: var(--main);
-    color: var(--secondary);
+    background: #FFD43B;
+    color: #333;
     border: 1px solid var(--main);
   }
 }
