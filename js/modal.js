@@ -18,15 +18,15 @@ window.addEventListener("click", function (event) {
 let modalesContenido = [{
   id: 1,
   title: 'Cards \n Proyecto Integrador',
-  text: 'Acá aprendí animaciones',
-  image: './images/capturaPetShop.png',
+  text: 'Cards for an e-commerce of sport shoes. -Under construction',
+  image: './images/shoesStore.png',
   techList: ['<span class="techs">html</span>', '<span class="techs">js</span>', '<span class="techs">css</span>'],
   linkSitioWeb: 'https://falconleandro.github.io/trabajos-react-presentacion/',
   linkGithub: ''
 }, {
   id: 2,
   title: 'ToDo App',
-  text: 'Acá integré los conceptos vistos.',
+  text: 'Fourth project: interactive to-do application. You can add tasks, mark them as completed and delete them. I combined all my knowledge in this final project and learned to render lists of components from arrays and to work with text entered by the user.',
   image: './images/toDoApp.png',
   techList: ['<span class="techs">html</span>', '<span class="techs">react</span>', '<span class="techs">css</span>', '<span class="techs">sass</span>'],
   linkSitioWeb: 'https://falconleandro.github.io/to-do-app/',
@@ -34,7 +34,7 @@ let modalesContenido = [{
 }, {
   id: 3,
   title: 'Calculadora',
-  text: 'En este trabajo aprendí el maquetado de formularios y algunas funcionalidades con javaScript.',
+  text: 'Third practice: interactive calculator that performs the four basic arithmetic operations. In this project, I practiced my knowledge and worked with flexbox to create a more elaborate structure. I also learned how to install packages with node package manager and learned how to check if a package was added to the dependency list of my React project. I also worked with props.children.',
   image: './images/calculadora.png',
   techList: ['<span class="techs">html</span>', '<span class="techs">css</span>'],
   linkSitioWeb: 'https://falconleandro.github.io/calculadora/',
@@ -42,8 +42,8 @@ let modalesContenido = [{
 }, {
   id: 4,
   title: 'Contador',
-  text: 'Acá descubrí la practicidad de flexbox.',
-  image: './images/capturaPizzeria.png',
+  text: 'In this second practice I built a click counter. It increments when the blue button is clicked and resets when the purple button is clicked. In this project I learned how to use the useState hook with functional components to maintain and update the state of a component. I also worked with event listeners',
+  image: './images/contador.png',
   linkSitioWeb: '',
   techList: ['<span class="techs">html</span>', '<span class="techs">react</span>', '<span class="techs">css</span>'],
   linkSitioWeb: 'https://falconleandro.github.io/contadorDeClicks/',
@@ -51,11 +51,11 @@ let modalesContenido = [{
 }, {
   id: 5,
   title: 'Testimonios',
-  text: 'En este trabajo conocí las hojas de estilo en css y su implementación.',
-  image: './images/capturaBatmanCv.png',
+  text: 'In this practice I built a clone of the freeCodeCamp testimonials section. I learned how to analyze the structure of a component, how to implement it with JSX, how to style a component with CSS and how to render several components passing different props to each of them.',
+  image: './images/testimonios.png',
   techList: ['<span class="techs">html</span>', '<span class="techs">react</span>', '<span class="techs">css</span>', '<span class="techs">sass</span>'],
   linkSitioWeb: 'https://falconleandro.github.io/testimonios-freecodecamp/',
-  linkGithub: './LemonPie/index.html'
+  linkGithub: ''
 }
 ];
 
@@ -87,11 +87,11 @@ function atraparIdCardClickeada() {
                 </div>
             </div>
             <div class="contenedor-modal-preview">
-                <img class="${id == 6 || id == 4 || id == 5 ? 'animacion-none' : ' '}" src="${modalesContenido[i].image}"/>
+                <img class="${'animacion-none'}" src="${modalesContenido[i].image}"/>
                 <div id="modal-preview-shadow"></div>
                 <div class="modal-preview-enlaces">
                     <a href="${modalesContenido[i].linkSitioWeb}" target=" _blank">GitHub</a>
-                    <a href="${modalesContenido[i].linkSitioWeb}" target=" _blank">Web Site</a>
+                    <a href="${modalesContenido[i].linkSitioWeb}" target=" _blank">Deploy</a>
                 </div>
             </div>
           `

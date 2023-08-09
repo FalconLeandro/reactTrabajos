@@ -15,14 +15,16 @@
 
 body {
   width: 100vw;
-  background-color: #8EC5FC;
+  min-height: 100vh;
+  background: #003973;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow-x: hidden;
   opacity: .9;
 }
 
 h1 {
   color: white;
-  padding-top: 3rem;
   font-weight: 300;
   font-size: 4rem;
 }
@@ -248,7 +250,7 @@ iframe {
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 3rem;
-    padding: 5rem 0 5rem 0;
+    padding: 2rem 0;
     font-weight: 100;
   }
 
@@ -273,7 +275,7 @@ iframe {
   /* Posición fija */
   z-index: 9999;
   /* Se situará por encima de otros elementos de la página*/
-  padding-top: 100px;
+  padding-top: 140px;
   /* El contenido estará situado a 200px de la parte superior */
   left: 0;
   top: 0;
@@ -298,11 +300,18 @@ iframe {
   overflow: hidden;
   height: 80%;
   width: 70%;
-  border-radius: 30px;
+  border-radius: 20px;
   -webkit-animation-name: animarsuperior;
   -webkit-animation-duration: 0.5s;
   animation-name: animarsuperior;
-  animation-duration: 0.5s
+  animation-duration: 0.5s;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    height: 82%;
+    width: 84%;
+    border-radius: 12px;
+  }
 }
 
 .contenedor-modal-descripcion {
@@ -310,20 +319,40 @@ iframe {
   width: 50%;
   display: flex;
   flex-direction: column;
+  text-align: left;
   align-items: flex-start;
   justify-content: space-around;
   padding: 20px 7%;
+
+  @media screen and (max-width: 480px) {
+    width: auto;
+    height: 67%;
+  }
 }
 
 .modal-descripcion-titulo {
   margin: unset;
   padding: unset;
   background: none;
+  color: white;
 }
 
 .contenedor-modal-descripcion p {
+  margin: 20px 0;
   text-align: left;
-  color: white;
+  color: gray;
+}
+
+.techs {
+  background-color: #FFD43B;
+  ;
+  color: #a78821;
+  border-radius: 2px;
+  padding: 2px 6px;
+  font-weight: bold;
+  text-shadow: solid 1px 1px 0px #006e61;
+  text-transform: uppercase;
+  cursor: default;
 }
 
 .contenedor-modal-preview {
@@ -333,9 +362,16 @@ iframe {
   left: 50%;
   display: flex;
   overflow: hidden;
+  justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    position: inherit;
+    width: auto;
+    left: auto;
+  }
 }
 
-img {
+.modal-image {
   max-width: 100%;
   position: absolute;
   /* aspect-ratio: 4/3; */
@@ -352,7 +388,7 @@ img {
 }
 
 #modal-preview-shadow {
-  background: linear-gradient(to top, #0c1015, #18212B 7%, transparent 75%);
+  background: linear-gradient(to top, #000000, #292c32 23%, transparent 60%);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -360,17 +396,32 @@ img {
 
 .modal-preview-enlaces {
   position: absolute;
-  bottom: 10%;
-  right: 5%;
+  bottom: 15%;
+  right: 8%;
+
+  @media screen and (max-width: 480px) {
+    right: inherit;
+  }
 }
 
 .modal-preview-enlaces a {
   padding: 14px 28px;
-  border-radius: 12px;
-  background: #39C9E9;
+  border: 1px solid;
+  border-radius: 6px;
+  background: transparent;
   text-decoration: none;
   font-weight: 600;
-  color: #18212B;
+  color: #FFD43B;
+  margin-left: 10px;
+  box-shadow: 0px 9px 7px rgba(9, 29, 34, 0.64);
+  transition: all .3s ease-in;
+
+  &:hover {
+
+    background: var(--main);
+    color: var(--secondary);
+    border: 1px solid var(--main);
+  }
 }
 
 
@@ -399,6 +450,18 @@ img {
   }
 }
 
+@keyframes contraer {
+  from {
+    top: 0px;
+    opacity: 1
+  }
+
+  to {
+    top: -300;
+    opacity: 0
+  }
+}
+
 @keyframes scroll-down {
   0% {
     transform: translatey(0px);
@@ -420,18 +483,24 @@ img {
 }
 
 .cerrar {
-  position: absolute;
-  color: aquamarine;
+  position: relative;
+  color: gray;
   text-shadow: 0px 9px 7px rgb(9 29 34 / 64%);
-  right: 17%;
-  top: 17%;
+  bottom: 77%;
+  left: 31%;
   font-size: 30px;
   font-weight: bold;
+
+  @media screen and (max-width: 760px) {
+    color: gray;
+    left: 35% !important;
+    bottom: 80% !important;
+  }
 }
 
 .cerrar:hover,
 .cerrar:focus {
-  color: #000;
+  color: var(--main);
   text-decoration: none;
   cursor: pointer;
 }
