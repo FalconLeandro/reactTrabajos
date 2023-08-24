@@ -37,7 +37,7 @@ particlesJS("particle-container", {
       }
     },
     "size": {
-      "value": 3,
+      "value": 1.8,
       "random": true,
       "anim": {
         "enable": false,

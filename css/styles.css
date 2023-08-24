@@ -69,24 +69,28 @@ i {
   animation: floating 6s ease-in-out infinite;
 }
 
+.fa-cat{
+  color: skyblue;
+}
+
 .fa-calculator {
   color: #FFD43B;
 }
 
 .fa-computer-mouse {
-  color: #3BDBFF;
+  color: #a357ff;
 }
 
 .fa-comments {
-  color: #ff3b79;
+  color: #3bffc1;
 }
 
 .fa-rectangle-list {
-  color: #5B2B96;
+  color: #3BDBFF;
 }
 
 .fa-table-cells-large {
-  color: #3bffc1;
+  color:#ff3b79 ;
 }
 
 
@@ -192,7 +196,7 @@ iframe {
   transform: translate(-60px, 10px);
   transition: opacity 0.2s ease-in-out,
     transform 0.5s cubic-bezier(0.4, 0, 1, 1);
-  color: #8EC5FC;
+  color: #0D4377;
 
 
 }

@@ -7,12 +7,12 @@ function bgChanger() {
     const tema = document.body.classList.toggle('dark');
 
     if (tema) {
-        label1.innerHTML='<i class="fas fa-moon i"><span class="span-tip" style="color: #3E3E3E;">Dark Mode</span></i>';
+        label1.innerHTML='<i class="fas fa-moon i"><span class="span-tip" style="color: #3E3E3E">Dark Mode</span></i>';
         spanTip.setAttribute('style','color:#404040');
         
     } else{
-        label1.innerHTML='<i class="fas fa-sun i"><span class="span-tip">Ligth Mode</span></i>';
-        spanTip.setAttribute('style','color:#8EC5FC;');
+        label1.innerHTML='<i class="fas fa-sun i"><span class="span-tip" style="color: #0D4377">Ligth Mode</span></i>';
+        spanTip.setAttribute('style','color:#0D4377');
         
     }
 
